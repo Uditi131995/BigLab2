@@ -1,0 +1,16 @@
+.vheight-100 {
+    min-height: 100vh;
+}
+
+#plusButton
+{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    z-index: 1;
+}
+
+.list-group-item.active{
+    background-color: green;
+    border: none;
+   }
