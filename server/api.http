@@ -1,0 +1,29 @@
+### get all task
+GET http://localhost:3001/api/tasks
+
+###Login
+GET http://localhost:3001/api/login
+
+### get task given the TaskID
+GET http://localhost:3001/api/tasks/5
+
+### get task given the userId
+GET http://localhost:3001/api/tasks/user/3
+
+### filter important
+GET http://localhost:3001/api/tasks/filter/All/user/3
+
+### create new task
+POST http://localhost:3001/api/addtask
+Content-Type: application/json
+
+{ "description": "Go the beach", "important": false, "private": true, "deadline": "2021-04-01" , "completed": 1, "user" :1 }
+
+### update task given the ID
+PUT http://localhost:3001/api/updatetask/11
+Content-Type: application/json
+
+{ "description": "Cook Pasta", "important": false, "private": true, "deadline": "2022-05-10" , "completed": 0, "user" :1 }
+
+### delete task given the ID
+DELETE http://localhost:3001/api/deletetask/23

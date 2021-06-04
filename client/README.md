@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+# `BigLab2-server`
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Description of the application.
 
-## Available Scripts
+## APIs
+Hereafter, we report the designed HTTP APIs, also implemented in the project.
 
-In the project directory, you can run:
+### List Tasks
 
-### `npm start`
+URL: `/api/tasks`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+HTTP Method: `GET`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Description: Retrieve the list of all the tasks
 
-### `npm test`
+Request body: `EMPTY`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Response: 
 
-### `npm run build`
+Response body:
+```
+[ {id, description, important, private, deadline, completed, user}, ... ]
+```
+### Get a Task
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+URL: `/api/tasks/:id`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+HTTP Method: `GET`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Description: Retrieve the attributes of the task with the specified id
 
-### `npm run eject`
+Request body: `EMPTY`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Response: 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Response body:
+```
+{id, description, important, private, deadline, completed, user}
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Filter list of Tasks
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+URL: `/api/tasks/filter/:filter`
 
-## Learn More
+HTTP Method: `GET`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Description: Retrieve the list of tasks that fulfill the filter request
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Request body: `EMPTY`
 
-### Code Splitting
+Response: 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Response body:
+```
+[ {description, important, private, deadline, completed, user}, ... ]
+```
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Add a new Task
 
-### Making a Progressive Web App
+URL: `/api/tasks`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+HTTP Method: `POST`
 
-### Advanced Configuration
+Description: Add a new Task in the database
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Request body: 
+``` 
+{description, important, private, deadline, user} 
+```
 
-### Deployment
+Response: 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Response body: `EMPTY`
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Update a Task
+
+URL: `/api/tasks/:id`
+
+HTTP Method: `PUT`
+
+Description: Update the attribute of the task with the specified id
+
+Request body: 
+``` 
+{description, important, private, deadline, user} 
+```
+
+Response: 
+
+Response body: 
+```
+{message}
+```
+
+### Delete a Task
+
+URL: `/api/tasks/:id`
+
+HTTP Method: `DELETE`
+
+Description: Delete the task with the specified id
+
+Request body: `EMPTY`
+
+Response: 
+
+Response body: `EMPTY`
