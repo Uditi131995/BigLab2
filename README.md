@@ -6,7 +6,7 @@ Hereafter, we report the designed HTTP APIs, also implemented in the project.
 
 ### Logging in the user
 
-URL: `/api/sessions`
+URL: `/api/login`
 
 HTTP Method: `POST`
 
