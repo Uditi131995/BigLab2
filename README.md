@@ -101,7 +101,7 @@ Request body:  An object representing an task (Content-Type: application/json).
 }
 
 Response: 201 Created (success) or 503 Service Unavailable 
-          (generic error, e.g., when trying to insert an already existent exam). If the request body is not valid, 422 Unprocessable Entity (validation error).
+          (generic error, e.g., when trying to insert an already existent task). If the request body is not valid, 422 Unprocessable Entity (validation error).
 
 Response body: `NONE`
 
