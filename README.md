@@ -114,7 +114,7 @@ HTTP Method: `PUT`
 
 Description: Update the attribute of the task with the specified id
 
-Request body: An object representing the entire exam 
+Request body: An object representing the entire task 
               (Content-Type:application/json).{
 
 
