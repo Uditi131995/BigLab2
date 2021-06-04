@@ -65,7 +65,6 @@ Request body: `EMPTY`
 Response: 
 
 Response body:
-```
 [ {id, description, important, private, deadline, completed, user}, ... ]
 
 
