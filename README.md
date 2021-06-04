@@ -1,4 +1,4 @@
-# BigLab2
+# Application To Manage All Tasks
 Description of the application.
 
 ## APIs
