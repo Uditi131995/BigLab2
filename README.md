@@ -52,6 +52,22 @@ Response:
 
 Response body: `EMPTY`
 
+### List Task of the current User
+
+URL: `/api/users/:id/tasks`
+
+HTTP Method: `GET`
+
+Description: Retrieve the list of all the tasks of the current user
+
+Request body: `EMPTY`
+
+Response: 
+
+Response body:
+```
+[ {id, description, important, private, deadline, completed, user}, ... ]
+
 
 ### List Tasks
 
