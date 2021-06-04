@@ -4,6 +4,55 @@ Description of the application.
 ## APIs
 Hereafter, we report the designed HTTP APIs, also implemented in the project.
 
+### Logging in the user
+
+URL: `/api/sessions`
+
+HTTP Method: `POST`
+
+Description: Perform the login for the user
+
+Request body: `EMPTY`
+
+Response: 
+
+Response body:
+```
+{id, email, name}
+```
+
+### Info about the logged in User
+
+URL: `/api/sessions/current`
+
+HTTP Method: `GET`
+
+Description: Get info about the current logged in user
+
+Request body: `EMPTY`
+
+Response: 
+
+Response body:
+```
+{req.user}
+```
+
+### Logging out the current User
+
+URL: `/api/sessions/current`
+
+HTTP Method: `DELETE`
+
+Description: Logging out the current User
+
+Request body: `EMPTY`
+
+Response: 
+
+Response body: `EMPTY`
+
+
 ### List Tasks
 
 URL: `/api/tasks`
