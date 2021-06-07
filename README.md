@@ -9,9 +9,9 @@ Application to manage a list of Tasks
 
 ### User Login 
 
-Email : danny.studenti@polito.it
+Email :` danny.studenti@polito.it`
 
-Password : password
+Password : `password`
 
 
 ## APIs
