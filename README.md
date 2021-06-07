@@ -1,6 +1,5 @@
 # Application To Manage All Tasks
 Application to manage a list of Tasks
-Functionalities provided by the application.
 1. Create a Task 
 2. Edit a Task 
 3. Delete a Task 
