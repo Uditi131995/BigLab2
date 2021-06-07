@@ -1,6 +1,9 @@
 # Application To Manage All Tasks
 Description of the application.
 
+### Home Page 
+![Tasklists](Tasklists.PNG)
+
 ## APIs
 Hereafter, we report the designed HTTP APIs, also implemented in the project.
 
@@ -203,5 +206,4 @@ Response: 204 No Content (success) or 503 Service Unavailable (generic error)
 
 Response body: `None`
 
-### Home Page 
-![Tasklists](Tasklists.PNG)
+
