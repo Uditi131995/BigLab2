@@ -7,6 +7,12 @@ Application to manage a list of Tasks
 ### Home Page 
 ![Tasklists](Tasklists.PNG)
 
+### User Login 
+
+Email : danny.studenti@polito.it
+Password : password
+
+
 ## APIs
 Hereafter, we report the designed HTTP APIs, also implemented in the project.
 
