@@ -90,6 +90,7 @@ function App() {
     // eslint-disable-next-line 
   }, [user]);
 
+  // Load the new list of tasks after add , update , delete 
   useEffect(() => {
     try {
       if (taskListUpdated) {
